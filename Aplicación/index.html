@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/estilo.css" />
+    <title>Obligatorio</title>
+  </head>
+  <body>
+    <div id="contenedor">
+      <header>
+        <img
+          id="logo"
+          src="https://bongomascots.com/wp-content/uploads/2024/07/Paseador-de-perros-corriendo-con-un-gran-perro-marro%CC%81n-Cuidador-de-perros-precios.png"
+          alt="logo"
+        />
+        <nav>
+          <ul id="navPrincipal">
+            <li>
+              <a id="Tabla-Estadistica">Ver paseadores</a>
+            </li>
+            <li>
+              <a id="contratacionesPendientes">Ver contrataciones</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- FIN CABEZAL -->
+      <main>
+        <section id="sectRegistro">
+          <!-- REGISTRO DEL CLIENTE -->
+          <h1>Registro de Cliente</h1>
+          <hr />
+          <!-- INPUTS -->
+          <label for="txtNombreUsuario">Nombre de Usuario:</label>
+          <input type="text" id="txtNombreUsuario" /><br />
+
+          <label for="txtContrasenia">Contraseña:</label>
+          <input type="password" id="txtContrasenia" /><br />
+
+          <label for="txtNombrePerro">Nombre de su Mascota:</label>
+          <input type="text" id="txtNombrePerro" /><br />
+
+          <label for="slcTamanioPerro">Tamaño de la Mascota:</label><br />
+          <select id="slcTamanioPerro">
+            <option value="">Seleccione una opción..</option>
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Pequeño">Pequeño</option></select><br/>
+
+          <input type="button" value="Registrarse" id="btnRegistrarse" /><br />
+          <input type="button" value="Iniciar Sesion" id="btnRedirigirSesion">
+          <p id="pMensaje"></p>
+          <hr />
+        </section>
+
+        <section id="sectSesion">
+          <!-- INICIO DE SESIÓN -->
+          <h1>Inicio de Sesión</h1>
+          <hr />
+          <!-- INPUTS -->
+          <label for="txtNombreUsuarioInicio">Nombre de Usuario:</label>
+          <input type="text" id="txtNombreUsuarioInicio" /><br />
+
+          <label for="txtContraseniaInicio">Contraseña:</label>
+          <input type="password" id="txtContraseniaInicio"/><br/>
+
+          <input type="button" value="Iniciar Sesión" id="btnInicioSesion"/>
+          <input type="button" value="Registrarse" id="btnRedirigirRegistro">
+
+          <p id="pMensajeInicio"></p>
+          <hr />
+        </section>
+
+        <section id="sectContrataciones">
+          <!-- CONTRATAR PASEADOR (CLIENTE) -->
+          <h1>Contrataciones</h1>
+          <hr />
+          <!-- INPUTS -->
+          <label id="labelContratar" for="slcContratar"> Paseadores Disponibles</label>
+          <select id="slcContratar">
+            <option value="">Seleccione un paseador..</option>
+            <input type="button" value="Contratar" id="btnContratar" />
+            <input type="button" value="Cancelar Contratacion" id="btnCancelarContratacion">
+          </select>
+          <p id="mensajeContrataciones"></p>
+          <div id="contratacionInfo">
+
+          </div>
+          <hr />
+          <input type="button" value="Cerrar Sesión" id="btnCerrarSesion">
+          <input type="button" value="Iniciar nueva contratacion" id="btnReiniciarContratacion">
+        </section>
+
+        <!-- CONTRATACIONES A PROCESAR (PASEADOR) -->
+        <section id="listadoDeContrataciones">
+          <h3>Listado de contrataciones</h3>
+          <table id="tblContrataciones">
+
+          </table>
+          <p id="pProcesar1">
+          </p>
+          <hr />
+          <input type="button" value="Cerrar Sesión" id="btnCerrarSesion1">
+        </section>
+        <!-- LISTADO DE INFORMACIÓN (PASEADOR) -->
+        <section id="perrosAsignados">
+          <h3>Perros Asignados</h3>
+          <p id="pProcesar2"></p>
+          <table id="tblAsignados">
+
+          </table>
+          <h3>Cupos</h3>
+            <table id="tblCupos">
+      
+          </table>
+          <hr/>
+          <input type="button" value="Cerrar Sesión" id="btnCerrarSesion2">
+          <input type="button" value="Volver" id="btnVolver">
+        </section>
+
+         <!-- LISTADO DE INFORMACIÓN (CLIENTE) -->
+        <section id="informePaseadores">
+          </table>
+          <h3>Lista de paseadores</h3>
+            <table id="tblPaseadores">
+      
+          </table>
+          <hr/>
+          <input type="button" value="Cerrar Sesión" id="btnCerrarSesion3">
+          <input type="button" value="Volver" id="btnVolver1">
+        </section>
+      </main>
+      <!-- FIN CONTENIDO -->
+    </div>
+    <!-- FIN CONTENEDOR -->
+
+    <script src="src/js/Cliente.js"></script>
+    <script src="src/js/Contratacion.js"></script>
+    <script src="src/js/Paseador.js"></script>
+    <script src="src/js/Sistema.js"></script>
+    <script src="src/js/codigo.js"></script>
+  </body>
+</html>
